@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      background-color: black;
+      color: brown;
+    }
+
+    img {
+      width: 50%;
+    }
+
+    #vd img {
+      width: 86%;
+    }
+
+    .t {
+      font-size: 150%;
+    }
+
+    strong {
+      text-transform: uppercase;
+    }
+
+    #vd {
+      border: 4px solid rgb(0, 0, 0);
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div>
+    <H1> Khái niệm của JS</H1>
+    <div>
+      <ul>
+        <li>Js là một ngôn ngữ lập trình bậc cao, hướng đối tượng và đa mô hình</li>
+        <li>ngôn ngữ lập trình bậc cao là chúng ta không phải suy nghĩ về những vấn đề phức tạp khi chạy code</li>
+        <li>hướng đối tượng là ngôn ngữ dựa trên khái niệm của đối tượng lưu trữ các dữ liệu</li>
+        <li>đa mô hình là lập trình theo nhiều cách khác nhau như là lập trình hướng mệnh lệnh or khai báo ,....</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <H1>Hiểu khái niệm về biến và các kiểu dữ liệu trong JavaScript(Primitive)</H1>
+    <p class="t">có 2 kiểu dữ liệu trong JS : Đối tượng (Object) và dữ liệu nguyên thủy (Primitive)</p>
+    <p>7 kiểu dạng dữ liệu nguyên thủy(Primitive) :</p>
+    <ul>
+      <p>cơ bản nhất</p>
+      <li><strong>number</strong>(Đại diện cho các số, bao gồm cả số nguyên và số thập phân) </li>
+      <li><strong>string</strong>(Đại diện cho các chuỗi ký tự) ,</li>
+      <li><strong>boolean</strong>(Chỉ có hai giá trị là true và false)</li>
+      <p>ít sử dụng</p>
+      <li><strong>Function</strong>(Đại diện cho một biến chưa được gán giá trị),</li>
+      <li><strong>null</strong>(Đại diện cho giá trị “không có gì”) ,</li>
+      <li><strong>symbol</strong>(Một giá trị nguyên thủy duy nhất và bất biến, thường được dùng làm khóa của thuộc tính
+        trong đốitượng.)</li>
+      <li><strong>bigint</strong>(Đại diện cho các số nguyên lớn hơn giới hạn của kiểu Number.)</li>
+    </ul>
+    <p>4 kiểu dạng dữ liệu Đối tượng (Object)</p>
+    <ul>
+      <li><strong>Array</strong>(Một danh sách các phần tử)</li>
+      <li><strong>Function</strong>(Một khối mã có thể được gọi thực thi)</li>
+      <li><strong>Date</strong>(Đại diện cho ngày và giờ)</li>
+      <li><strong>Set/Map</strong>(Các cấu trúc dữ liệu đặc biệt để lưu trữ các giá trị duy nhất và các cặp khóa-giá
+        trị)</li>
+    </ul>
+    <div id="vd">
+      <p>Vi du</p>
+      <img src="./imgg/1.png">
+    </div>
+  </div>
+
+  <div>
+    <h1> Biết cách khai báo biến, phân biệt giữa let const và var</h1>
+    <p>phân biệt giữa let const và var</p>
+    <ul>
+      <li><strong>let</strong> là biến có thể thay đổi giá trị nhưng là ở trong block- scope ( mutable variable )</li>
+      <li><strong>const</strong> là biến không thể thay đổi đc giá trị (immututable variable)</li>
+      <li><strong>var</strong> cũng giống let nhưng là ở function-scope</li>
+    </ul>
+    <p>
+      chúng ta nên sử dụng <strong>const</strong> khi cần khai báo biến không thay đổi và
+      chỉ dùng <strong>let</strong> khi biết chắc là biến đấy nó sẽ thay đổi trong tương lai
+      Hạn chế sử dụng <strong>var</strong> vì nó có thể gây ra các lỗi khó phát hiện
+    </p>
+    <div id="vd">
+      <p>vi du</p>
+      <img src="./imgg/2.png" alt="">
+    </div>
+  </div>
+
+
+
+  <div>
+    <h1>Vận dụng được các toán tử cơ bản, độ ưu tiên giữa các toán tử</h1>
+    <p> độ ưu tiên trong JS phép nhân (*) và phép chia (/) có độ ưu tiên cao hơn so với phép cộng(+) và phép trừ (-)</p>
+    <p>toán tử chia lấy dư (%)</p>
+    <p>toán tử mũ(**)</p>
+    <p> phép gắn =,+=,*= vd: x+=10 => x = x+10
+      <br>;/p
+      x++ => x= x+1
+    </p>
+  </div>
+
+
+  <div>
+    <h1> Hiểu rõ về câu lệnh if-else, switch</h1>
+    <p> câu lệnh if-else là câu lệnh ktra điều kiện ra thực hiện các hành động khác nhau dựa trên kết quả đó </p>
+    <img src="./img1/1.png">
+    <p>switch case </p>
+    <img src="./img1/switchcase.png">
+  </div>
+
+
+  <div>
+    <h1> Biết cách khai báo hàm, cách gọi hàm và một số cơ chế trong hàm</h1>
+    <p>cách khai báo hàm</p>
+    <img src="./img1/code.png">
+    <p>Cách gọi hàm</p>
+    <img src="./img1/goiham.png">
+    <p>Cơ chế trong hàm</p>
+    <img src="./img1/cocheham.png">
+  </div>
+
+
+  <h1>khái niệm về Object trong JavaScript</h1>
+  <p>Object là 1 khái niệm trừu tượng thể hiện cho 1 số đối tượng cụ thể </p>
+  <img src="./img1/object.png">
+
+
+
+  <div>
+    <h1>Sử dụng các vòng lặp for, while cũng với các từ khóa break và continue</h1>
+    <p> vòng lặp <strong>for</strong> là 1 cấu trúc điều khiển , cho phép tự động hóa các tác vụ lặp đi lặp lại</p>
+    <img src="./img1/for.png">
+    <p>vòng lặp <strong>while</strong> là vòng lặp 1 khối mã cho đến khi điều kiện trong vòng lặp trở thành sai </p>
+    <img src="./img1/while.png">
+    <p> <strong>break</strong> được sử dụng để thoát khỏi vòng lặp ngay lập tức </p>
+    <p><strong>continue</strong> được sử dụng để bỏ qua phần còn lại của vòng lặp và chuyển đến lần lặp tiếp theo.</p>
+    <div id="vd">
+      <p>vi du</p>
+      <img src="./imgg/3.png" alt="">
+    </div>
+  </div>
+
+
+
+  <div>
+    <h1>Khái niệm về mảng</h1>
+    <p>Array là 1 cấu trúc dữ liệu quan trọng trong JS, cho phép lưu trữ các giá trị khác nhau vào trong một biến duy
+      nhất</p>
+    <p style="font-size: 150%;">có 2 cách khai báo mảng </p>
+    <img src="./img1/array.png">
+    <h1>Toán tử array</h1>
+    <img src="./img1/toantuarray.png">
+    <p style="font-size: 150%;">Phương thức cơ bản của array</p>
+    <p><strong>push</strong> thêm 1 phần tử vào cuối array </p>
+    <p><strong>unshift</strong> thêm một phần tử vào đầu array</p>
+    <P><strong>pop</strong> gỡ một phần tử khỏi đuôi array</P>
+    <p><strong>indexof</strong> chỉ ra vị trí của 1 phần tử trong array</p>
+    <p><strong>includes</strong> chỉ ra phần tử có xuất hiện trong array không</p>
+    <img src="./img1/phuongthucarray.png">
+  </div>
+
+
+
+
+
+  <div>
+    <h1>Hiểu được cách viết code tốt, các kỹ năng giải quyết vấn đề để trở thành một lập trình viên chuyên nghiệp</h1>
+    <img src="./img1/nguyennhanthatbaikhivietcode.png">
+    <br>
+    <img src="./img1/hoccodehieuqua.png">
+    <br>
+    <img src="./img1/giaiquyetvande.png">
+  </div>
+
+
+  <div>
+    <h1>HIểu được khái về DOM và DOM Manipulation</h1>
+    <div>
+      <p style="font-size: 150%;">DOM (Document object model) là một biểu diễn có cấu trúc của tài liệu HTML</p>
+      <p>DOM một điểm kết nối giữa tài liệu HTML và code JS</p>
+    </div>
+    <div>
+      <p style="font-size: 150%;">DOM Manipulation</p>
+      <p>việc thay đổi nội dung và cấu trúc của tài liệu HTML và CSS thông qua việc tương tác với DOM</p>
+    </div>
+  </div>
+  <div>
+    <h1>Thao tác được việc truy vấn các phần tử trên DOM Tree</h1>
+    <img src="./img1/thaotac.png">
+    <p style="font-size: 150%;">Biết cách xử lý một số Event trong DOM</p>
+    <p>có các event phổ biến nhất thường dùng</p>
+    <img src="./img1/eventphobien.png">
+  </div>
+
+
+
+  <div>
+    <h1> Vận dụng được nguyên tắc Dry để tối ưu hóa mã nguồn</h1>
+    <div>
+      <p>Dry(don't repeat your code)</p>
+      <img src="./img1/dry.png">
+      <h1> Sử dụng JavaScript để thay đổi các thuộc tính trên DOM Tree</h1>
+      <img src="./img1/thaydoi.png">
+      <h1>Nắm rõ được quá trình thực thi một chương trình Javascript</h1>
+      <img src="./img1/quatrinhjsthucthi.png">
+    </div>
+  </div>
+
+
+  <div>
+    <h1>Nắm được các khái niệm như JS engine. JS runtime, Web API, Callback queue</h1>
+    <h4>JS engine</h4>
+    <img src="./img1/jsengine.png">
+    <h4>JS runtime</h4>
+    <img src="./img1/jsruntime.png">
+    <p>Web API (Application Programming Interface) là hệ thống giao diện lâp trình dành cho máy chủ web or trình
+      duyệtweb</p>
+    <p>API là một phần của phần mềm có thể được sử dụng bởi một phần mềm khác, cho phép các ứng dụng nói chuyện với
+      nhauvà trao đổi thông tin</p>
+    <h4>Callback Queue</h4>
+    <p>Callback Queue là cấu trúc dữ liệu có chứa tất cả các hàm callback sẵn sàng để thực thi.</p>
+  </div>
+
+
+
+
+  <h1>Có kiến thức cơ bản về Execution Context, Call Stack trong JavaScript</h1>
+  <p>Execution Context</p>
+  <img src="./img1/ec.png">
+  <p>Call Stack là nơi các Execution Context xếp chồng lên nhau, EC ở trên cùng của stack là thứ hiện đang chạy và khi
+    chạy xong nó sẽ bị xóa khỏi stack.</p>
+  <h1> Hiểu về Scope và 3 dạng Scope trong Javascript</h1>
+  <img src="./img1/3dangscope.png">
+  <h1>Áp dụng được từ khóa this</h1>
+  <p>Định nghĩa this</p>
+  <img src="./img1/dinhnghiathis.png">
+  <p>Sử dụng this</p>
+  <img src="./img1/sudungthis.png">
+  <div>
+    <h1 style="color: brown;">PRF192x_o23: Phân biệt được Arrow Function và Regular Function</h1>
+    <div>
+      <p style="font-size: 150%;">Tóm tắt</p>
+
+      <ul>
+        <li>Arrow Functions: Cú pháp ngắn gọn, không có this và arguments riêng, thích hợp cho các hàm ngắn và
+          các hàm callback.</li>
+        <li>Regular Functions: Cú pháp đầy đủ, có this và arguments riêng, thích hợp cho các hàm phức tạp và các
+          phương thức trong lớp</li>
+      </ul>
+
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o24: Phân biệt được Primitives với Objects</h1>
+    <div>
+      <p style="font-size: 150%;">Primitives</p>
+      <p>Primitives là các kiểu dữ liệu cơ bản và không thể thay đổi (immutable). JavaScript có 7 kiểu dữ liệu
+        nguyên thủy: <strong>
+          string,
+          number,
+          bigint,
+          boolean,
+          symbol,
+          null,
+          undefined</strong></p>
+      <img src="./img/62.png" alt="" style="width: 50%;">
+      <p style="font-size: 150%;">Primitives</p>
+      <p>Objects là các kiểu dữ liệu phức hợp và có thể thay đổi (mutable). Một đối tượng có thể chứa nhiều giá
+        trị dưới dạng thuộc tính và phương thức. Các đối tượng bao gồm: <strong>
+          Object,
+          Array,
+          Function,
+          Date,
+          RegExp
+        </strong></p>
+      <img src="./img/63.png" alt="">
+
+      <div>Sự khác biệt chính</div>
+      <ul>
+        <li>Thành phần: Primitives không được tạo thành từ các kiểu dữ liệu khác, trong khi Objects có thể chứa
+          các primitives và các objects khác</li>
+        <li>Tính bất biến: Primitives là bất biến, nghĩa là giá trị của chúng không thể thay đổi sau khi được
+          tạo ra. Ngược lại, Objects có thể thay đổi giá trị của các thuộc tính của chúng</li>
+        <li>Truyền giá trị: Primitives được truyền bằng giá trị (pass by value), trong khi Objects được truyền
+          bằng tham chiếu (pass by reference)</li>
+        <li>So sánh: Primitives được so sánh bằng giá trị, trong khi Objects được so sánh bằng tham chiếu</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o25: Phân biệt được Pass by Value với và Pass by Reference</h1>
+    <div>
+      <p style="font-size: 150%;">Pass by Value</p>
+      <img src="./img/60.png" alt="">
+      <p style="font-size: 150%;">Pass by Reference</p>
+      <img src="./img/61.png" alt="">
+      <div>Tóm tắt</div>
+      <ul>
+        <li>Pass by Value: Áp dụng cho các kiểu dữ liệu nguyên thủy (numbers, strings, booleans, null,
+          undefined). Một bản sao của giá trị được truyền vào hàm.</li>
+        <li>Pass by Reference: Áp dụng cho các kiểu dữ liệu phức hợp (objects, arrays, functions). Một tham
+          chiếu đến giá trị được truyền vào hàm</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o26: Hiểu rõ về First-Class Function và Higher-Order Function</h1>
+    <div>
+      <p style="font-size: 150%;">First-Class Function là một khái niệm trong lập trình mà ở đó các hàm được coi
+        như là các đối tượng hạng nhất. Điều này có nghĩa là các hàm có thể được:</p>
+      <ul>
+        <li>Gán cho các biến</li>
+        <li>Truyền làm đối số cho các hàm khác</li>
+        <li>Trả về từ các hàm khác</li>
+      </ul>
+      <img src="./img/58.png" alt="">
+      <p style="font-size: 150%;">Higher-Order Function là một hàm nhận một hoặc nhiều hàm khác làm đối số hoặc
+        trả về một hàm khác như là kết quả. Điều này cho phép bạn tạo ra các hàm linh hoạt và tái sử dụng cao.
+      </p>
+      <img src="./img/59.png" alt="">
+      <div style="font-size: 150%;">Sự khác biệt giữa First-Class Function và Higher-Order Function</div>
+      <ul>
+        <li>First-Class Function: Đề cập đến khả năng của các hàm được xử lý như các đối tượng hạng nhất.</li>
+        <li>Higher-Order Function: Đề cập đến các hàm có thể nhận hoặc trả về các hàm khác.</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o27 Nắm được khái niệm về Callback và Closure trong JavaScript</h1>
+    <div>
+      <p style="font-size: 150%;">Callback</p>
+      <p>Callback là một hàm được truyền vào một hàm khác như một đối số và được gọi lại (callback) bên trong hàm
+        đó để hoàn thành một số tác vụ hoặc hành động. Callback rất hữu ích trong lập trình bất đồng bộ, chẳng
+        hạn như xử lý sự kiện hoặc gọi API.</p>
+      <img src="./img/56.png" alt="">
+      <p style="font-size: 150%;">Closure</p>
+      <p>Closure là một hàm có thể ghi nhớ và truy cập phạm vi (scope) của nó ngay cả khi hàm đó được thực thi bên
+        ngoài phạm vi ban đầu của nó. Closure cho phép bạn tạo ra các biến riêng tư và duy trì trạng thái của
+        chúng.</p>
+      <img src="./img/57.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o28: Vận dụng được các phương thức gọi hàm như call, apply và bind.</h1>
+    <div>
+      <p style="font-size: 150%;">call()</p>
+      <img src="./img/53.png" alt="">
+      <p style="font-size: 150%;">appky()</p>
+      <img src="./img/54.png" alt="">
+      <p style="font-size: 150%;">bind()</p>
+      <img src="./img/55.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o29: Áp dụng được các Array Method trong JavaScript (slice, splice, reverse,
+      concat, join, ...)</h1>
+    <div>
+      <p style="font-size: 150%;">slice()</p>
+      <img src="./img/48.png" alt="">
+      <p style="font-size: 150%;">splice()</p>
+      <img src="./img/49.png" alt="">
+      <p style="font-size: 150%;">reverse()</p>
+      <img src="./img/50.png" alt="">
+      <p style="font-size: 150%;">concat()</p>
+      <img src="./img/51.png" alt="">
+      <p style="font-size: 150%;">join()</p>
+      <img src="./img/52.png" alt="">
+
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o30: Sử dụng được các Array Method để biến đổi mảng (map, reduce, filter, ...)
+    </h1>
+    <div>
+      <p style="font-size: 150%;">MAP()</p>
+      <img src="./img/43.png" alt="">
+      <p style="font-size: 150%;">filter()</p>
+      <img src="./img/44.png" alt="">
+      <p style="font-size: 150%;">reduce()</p>
+      <img src="./img/45.png" alt="">
+      <p style="font-size: 150%;">forEach()</p>
+      <img src="./img/46.png" alt="">
+      <p style="font-size: 150%;">find()</p>
+      <img src="./img/47.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o31: Vận dụng được các thao tác như truy vấn, tạo mới và xóa DOM Element</h1>
+    <div>
+      <p style="font-size: 150%;">Truy vấn DOM Element</p>
+      <p>Để truy vấn các phần tử trong DOM, bạn có thể sử dụng các phương thức như getElementById,
+        getElementsByClassName, getElementsByTagName, querySelector, và querySelectorAll.</p>
+      <img src="./img/40.png" alt="">
+      <p style="font-size: 150%;">Tạo mới DOM Element</p>
+      <p>Để tạo mới một phần tử DOM, bạn sử dụng phương thức createElement và sau đó thêm nó vào DOM bằng
+        appendChild hoặc insertBefore.</p>
+      <img src="./img/41.png" alt="">
+      <p style="font-size: 150%;">Xóa DOM Element</p>
+      <p>Để xóa một phần tử DOM, bạn có thể sử dụng phương thức removeChild hoặc remove.</p>
+      <img src="./img/42.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o32: Sử dụng được JavaScript để thay đổi các Style, Attribute và Class trong
+      DOM</h1>
+    <div>
+      <p style="font-size: 150%;">1. Thay đổi Style</p>
+      <img src="./img/35.png" alt="">
+      <p style="font-size: 150%;">2. Thay đổi Attribute</p>
+      <img src="./img/36.png" alt="">
+      <p style="font-size: 150%;">3. Thay đổi Class</p>
+      <img src="./img/37.png" alt="">
+      <div id="vd">
+        <p style="font-size: 150%;">Ví dụ minh họa</p>
+        <img src="./img/38.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o33: Có kiến thức về Event Propagation và Event Delegation</h1>
+    <div>
+      <p style="font-size: 150%;">Event Propagation</p>
+      <p>Event Propagation (sự lan truyền sự kiện) là cách mà một sự kiện di chuyển qua DOM. Nó bao gồm hai giai
+        đoạn chính:</p>
+      <ul>
+        <li>Capturing (Bắt sự kiện): Sự kiện di chuyển từ phần tử gốc (root) đến phần tử mục tiêu (target). Ví
+          dụ, khi bạn click vào một phần tử < a>, sự kiện sẽ di chuyển từ window -> document -> html -> body
+            -> div -> a.</li>
+        <li>Bubbling (Nổi bọt): Sau khi sự kiện được xử lý ở phần tử mục tiêu, nó sẽ di chuyển ngược lại từ phần
+          tử mục tiêu lên phần tử gốc. Ví dụ, từ < a> -> div -> body -> html -> document -> window.</li>
+      </ul>
+      <p style="font-size: 150%;">Event Delegation</p>
+      <p style="font-size: 150%;">Event Delegation (ủy quyền sự kiện) là một kỹ thuật sử dụng Event Propagation để
+        quản lý sự kiện trên nhiều phần tử con bằng cách sử dụng một listener duy nhất trên phần tử cha. Điều
+        này giúp giảm thiểu số lượng event listeners cần thiết và cải thiện hiệu suất.</p>
+      <img src="./img/39.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o34: Sử dụng được cơ chế DOM Traversing</h1>
+    <div>
+      <p style="font-size: 150%;"></p>
+      <img src="./img/.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o35: Hiểu được khái niệm về OOP và 4 đặc trung cơ bản của OOP trong JS</h1>
+    <div>
+      <p style="font-size: 150%;">Lập trình hướng đối tượng (Object-Oriented Programming - OOP) là một phương pháp
+        lập trình dựa trên khái niệm về lớp (class) và đối tượng (object). OOP giúp tổ chức mã nguồn một cách rõ
+        ràng, dễ quản lý và tái sử dụng. Dưới đây là bốn đặc trưng cơ bản của OOP và cách chúng được áp dụng
+        trong JavaScript:</p>
+      <p>1. Tính đóng gói (Encapsulation)</p>
+      <img src="./img/31.png" alt="">
+      <p>2. Tính kế thừa (Inheritance)</p>
+      <img src="./img/32.png" alt="">
+      <p>3. Tính đa hình (Polymorphism)</p>
+      <img src="./img/33.png" alt="">
+      <p>4. Tính trừu tượng (Abstraction)</p>
+      <img src="./img/34.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o36: Sử dụng được constructor và toán tử new trong JavaScript</h1>
+    <div>
+      <p style="font-size: 150%;">1. Constructor</p>
+      <img src="./img/29.png" alt="">
+      <p style="font-size: 150%;">2. Toán tử new</p>
+      <img src="./img/30.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o37: Hiểu rõ được định nghĩa về Prototype trong JavaScript</h1>
+    <div>
+      <p style="font-size: 150%;">Prototype là một khái niệm cốt lõi trong JavaScript, đặc biệt quan trọng trong
+        việc thực thi lập trình hướng đối tượng (OOP). Dưới đây là một số điểm chính về Prototype:</p>
+      <ul>
+        <li>Định nghĩa:</li>
+        <div>Prototype là cơ chế mà các đối tượng (objects) trong JavaScript kế thừa các thuộc tính (properties)
+          và phương thức (methods) từ một đối tượng khác1. Mỗi đối tượng trong JavaScript đều có một
+          prototype, và các đối tượng này kế thừa các thuộc tính và phương thức từ prototype của mình</div>
+        <li>Cách thức hoạt động</li>
+        <div>Prototype Chain: Khi bạn truy cập một thuộc tính của một đối tượng, JavaScript sẽ tìm thuộc tính đó
+          trong đối tượng. Nếu không tìm thấy, nó sẽ tiếp tục tìm trong prototype của đối tượng đó, và cứ tiếp
+          tục như vậy cho đến khi tìm thấy hoặc đến cuối chuỗi prototype (null)</div>
+        <div>Prototype Object: Prototype bản thân nó cũng là một đối tượng. Ví dụ, khi bạn tạo một hàm khởi tạo
+          (constructor function), thuộc tính prototype của hàm này sẽ trở thành prototype của tất cả các đối
+          tượng được tạo ra từ hàm khởi tạo đó</div>
+      </ul>
+      <img src="./img/28.png" alt="">
+      <p>Trong ví dụ này, phương thức greet được thêm vào prototype của Person. Tất cả các đối tượng được tạo ra
+        từ hàm khởi tạo Person sẽ có thể truy cập và sử dụng phương thức greet</p>
+      <p style="font-size: 150%;">Tầm quan trọng của Prototype</p>
+      <p>Prototype giúp tiết kiệm bộ nhớ và tăng hiệu suất bằng cách cho phép các đối tượng chia sẻ các phương
+        thức và thuộc tính. Điều này đặc biệt hữu ích khi bạn có nhiều đối tượng cùng loại và muốn tránh việc
+        sao chép các phương thức cho từng đối tượng</p>
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o38: Khai báo được ES6 Class</h1>
+    <div>
+      <p style="font-size: 150%;">1. Khai báo một class cơ bản</p>
+      <img src="./img/23.png" alt="">
+      <p style="font-size: 150%;">2. Kế thừa class</p>
+      <img src="./img/24.png" alt="">
+      <p style="font-size: 150%;">3. Sử dụng super để gọi phương thức của class cha</p>
+      <img src="./img/25.png" alt="">
+      <p style="font-size: 150%;">4. Các phương thức tĩnh (static methods)</p>
+      <img src="./img/26.png" alt="">
+      <p style="font-size: 150%;">5. Các thuộc tính và phương thức riêng tư (private)</p>
+      <img src="./img/27.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o39: Áp dụng được các cách kế thừa Class</h1>
+    <div>
+      <p style="font-size: 150%;">Kế thừa (Inheritance) là một trong những tính chất quan trọng của lập trình
+        hướng đối tượng (OOP). Nó cho phép một lớp (class) mới được xây dựng dựa trên các định nghĩa của một lớp
+        đã có, giúp tái sử dụng mã nguồn và giảm thiểu lỗi. Dưới đây là một số cách áp dụng kế thừa trong các
+        ngôn ngữ lập trình phổ biến:</p>
+      <p>1. Kế thừa cơ bản với extends</p>
+      <img src="./img/19.png" alt="" >
+      <p>2. Gọi phương thức của lớp cha với super</p>
+      <img src="./img/20.png" alt="">
+      <p>3. Kế thừa nhiều cấp (Multilevel Inheritance)</p>
+      <img src="./img/21.png" alt="" >
+      <p>4. Kế thừa từ các biểu thức class</p>
+      <img src="./img/22.png" alt="" >
+
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o40: Biết cách sử dụng hàm super()</h1>
+    <div>
+      <p style="font-size: 150%;">Trong JavaScript, từ khóa super được sử dụng để gọi các phương thức và truy cập
+        các thuộc tính của lớp cha từ lớp con. Dưới đây là cách sử dụng super trong các tình huống khác nhau:
+      </p>
+      <p>1. Gọi constructor của lớp cha</p>
+      <img src="./img/16.png" alt="" >
+      <p>2. Gọi phương thức của lớp cha</p>
+      <img src="./img/17.png" alt="">
+      <p>3. Truy cập thuộc tính của lớp cha</p>
+      <img src="./img/18.png" alt="">
+      <p>Lợi ích của việc sử dụng super</p>
+      <ul>
+        <li>Tái sử dụng mã: Giảm thiểu việc viết lại mã bằng cách gọi các phương thức và constructor của lớp
+          cha.</li>
+        <li>Dễ bảo trì: Dễ dàng thay đổi hoặc mở rộng các phương thức của lớp cha mà không ảnh hưởng đến lớp
+          con.</li>
+        <li>Quản lý kế thừa: Hỗ trợ quản lý và mở rộng các lớp kế thừa một cách hiệu quả.</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o41: Hiểu được khái niệm về đồng bộ và bất đồng bộ</h1>
+    <div>
+      <p style="font-size: 150%;">Đồng bộ (Synchronous)</p>
+      <p>Đồng bộ là cách xử lý mà các tác vụ được thực hiện tuần tự, nghĩa là tác vụ tiếp theo chỉ bắt đầu khi tác
+        vụ trước đó đã hoàn thành. Điều này đảm bảo rằng các tác vụ được thực hiện theo thứ tự đã định trước.
+      </p>
+      <img src="./img/13.png" alt="">
+    </div>
+    <div>
+      <p style="font-size: 150%;">Bất đồng bộ (Asynchronous)</p>
+      <p>Bất đồng bộ là cách xử lý mà các tác vụ có thể được thực hiện không theo thứ tự, nghĩa là một tác vụ có
+        thể bắt đầu và hoàn thành trong khi các tác vụ khác vẫn đang chờ. Điều này giúp tối ưu hóa thời gian và
+        tài nguyên, đặc biệt là khi xử lý các tác vụ tốn thời gian như yêu cầu mạng hoặc đọc/ghi tệp.</p>
+      <img src="./img/14.png" alt="">
+    </div>
+    <div>
+      <p style="font-size: 150%;">So sánh đồng bộ và bất đồng bộ</p>
+      <ul>
+        <li>Đồng bộ: Các tác vụ được thực hiện tuần tự, dễ hiểu và dễ quản lý nhưng có thể gây chậm trễ nếu một
+          tác vụ mất nhiều thời gian.</li>
+        <li>Bất đồng bộ: Các tác vụ có thể được thực hiện song song, giúp tối ưu hóa thời gian và tài nguyên
+          nhưng có thể phức tạp hơn để quản lý và debug.</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size: 150%;">Ứng dụng trong JavaScript</p>
+      <p>JavaScript sử dụng cả hai cơ chế đồng bộ và bất đồng bộ để xử lý các tác vụ. Một số phương pháp bất đồng
+        bộ phổ biến trong JavaScript bao gồm:</p>
+      <ul>
+        <li>Callbacks: Hàm được truyền vào như một tham số và được gọi lại khi tác vụ hoàn thành.</li>
+        <li>Promises: Đối tượng đại diện cho một tác vụ bất đồng bộ có thể hoàn thành hoặc thất bại trong tương
+          lai.</li>
+        <li>Async/Await: Cú pháp hiện đại giúp làm việc với Promises dễ dàng hơn.</li>
+      </ul>
+      <img src="./img/15.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o42: Nắm được khái niệm về API và AJAX Call</h1>
+    <div>
+      <p style="font-size: 150%;">API(Application Programming Interface):</p>
+      <p>API là một tập hợp các quy tắc và giao thức cho phép các ứng dụng phần mềm giao tiếp với nhau. API định
+        nghĩa các phương thức và dữ liệu mà các ứng dụng có thể sử dụng để tương tác với nhau. Ví dụ, một API có
+        thể cho phép một ứng dụng di động truy cập dữ liệu từ một máy chủ web</p>
+      <p style="font-size: 150%;">AJAX (Asynchronous JavaScript and XML)</p>
+      <p>AJAX là một kỹ thuật để tạo các yêu cầu HTTP bất đồng bộ từ trình duyệt đến máy chủ mà không cần tải lại
+        toàn bộ trang web. Điều này giúp cải thiện trải nghiệm người dùng bằng cách làm cho các trang web phản
+        hồi nhanh hơn và mượt mà hơn.</p>
+      <div>
+        <p style="font-size: 150%;">Cách hoạt động của AJAX:</p>
+        <ul>
+          <li>Sự kiện xảy ra: Một sự kiện xảy ra trên trang web (ví dụ: người dùng nhấp vào một nút).</li>
+          <li>Tạo XMLHttpRequest: Một đối tượng XMLHttpRequest được tạo bởi JavaScript.</li>
+          <li>Gửi yêu cầu: Đối tượng XMLHttpRequest gửi một yêu cầu đến máy chủ.</li>
+          <li>Xử lý phản hồi: Máy chủ xử lý yêu cầu và gửi phản hồi trở lại trình duyệt.</li>
+          <li>Cập nhật trang web: JavaScript cập nhật trang web dựa trên phản hồi mà không cần tải lại toàn bộ
+            trang.</li>
+        </ul>
+      </div>
+      <div id="vd">
+        <p style="font-size: 150%;">Ví dụ về AJAX với XMLHttpRequest</p>
+        <img src="./img/12.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o43: Áp dụng được XMLHttpRequest</h1>
+    <div>
+      <p style="font-size: 150%;">Tạo một đối tượng XMLHttpRequest</p>
+      <img src="./img/7.png" alt="">
+      <p style="font-size: 150%;">Mở kết nối</p>
+      <img src="./img/8.png" alt="">
+      <p style="font-size: 150%;">Gửi yêu cầu</p>
+      <img src="./img/9.png" alt="">
+      <p style="font-size: 150%;">Xử lý phản hồi</p>
+      <img src="./img/10.png" alt="">
+      <p style="font-size: 150%;">Sử dụng onload</p>
+      <img src="./img/10.png" alt="">
+    </div>
+    <div id="vd">
+      <p style="font-size: 150%;">Ví dụ hoàn chỉnh</p>
+      <img src="./img/12.png" alt="">
+    </div>
+  </div>
+  <div>
+    <h1 style="color: brown;">PRF192x_o44: Sử dụng được Promises và Fetch API</h1>
+    <div>
+      <p style="font-size: 150%;">Promises là một cách để xử lý các hoạt động bất đồng bộ. Một Promise đại diện
+        cho một giá trị có thể có ngay bây giờ, hoặc trong tương lai, hoặc không bao giờ.</p>
+      <img src="./img/4.png" alt="">
+    </div>
+    <div>
+      <p style="font-size: 150%;">Fetch API cung cấp một giao diện JavaScript để thực hiện các yêu cầu HTTP và xử
+        lý các phản hồi. Fetch API dựa trên Promises, giúp mã dễ đọc và quản lý hơn.</p>
+      <img src="./img/5.png" alt="">
+    </div>
+    <div id="vd">
+      <p style="font-size: 150%;">Có thể kết hợp Promises và Fetch API với async/await để mã dễ đọc hơn:</p>
+      <img src="./img/6.png" alt="">
+    </div>
+  </div>
+
+  <div>
+    <h1 style="color: brown;">PRF192x_o45:Vận dụng được Async/Await để xử lý bất đồng bộ:</h1>
+    <div>
+      <p style="font-size: 150%;">Hàm async luôn trả về một Promise. Nếu hàm trả về một giá trị, JavaScript sẽ tự
+        động bọc nó trong một Promise đã được giải quyết.</p>
+      <img src="./img/1.png" alt="">
+    </div>
+    <div>
+      <p style="font-size: 150%;">Từ khóa await chỉ có thể được sử dụng bên trong một hàm async. Nó làm cho
+        JavaScript chờ cho đến khi Promise được giải quyết và trả về kết quả của nó.</p>
+      <img src="./img/2.png" alt="">
+    </div>
+    <div id="vd">
+      <p style="font-size: 150%;">Dưới đây là một ví dụ hoàn chỉnh sử dụng cả async và await để lấy dữ liệu từ một
+        API và xử lý lỗi nếu có:</p>
+      <img src="./img/3.png" alt="">
+    </div>
+  </div>
+</body>
+
+</html>
